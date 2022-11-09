@@ -1,0 +1,41 @@
+.calcdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 400px;
+    padding: 1%;
+    border: 1px solid red;
+    background-color: black;
+    color: maroon;
+}
+.calc_inpdiv{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.calc_inpdiv > input{
+     width: 80%;
+     height: 30px;
+     padding: 1%;
+     border: none;
+}
+
+.calc_btndiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8%;
+
+}
+.calc_btndiv button{
+    border: none;
+    background-color: white;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+}
