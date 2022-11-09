@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import { RiDeleteBack2Line } from "react-icons/ri";
-import {
-  AiOutlineClose,
-  AiOutlinePercentage,
-  AiOutlinePlus,
-} from "react-icons/ai";
 import styles from "./Calc.module.css";
 
 export const Calc = () => {
@@ -12,7 +7,7 @@ export const Calc = () => {
 
   const handleButton = (e) => {
     let val = e.target.value;
-    setInpVal(inpVal + val);
+    setInpVal(inpVal.concat(val));
   };
   const handleCalculation = () => {
     setInpVal(eval(inpVal).toString());
@@ -24,9 +19,6 @@ export const Calc = () => {
           <input
             type="text"
             value={inpVal}
-            onChange={(e) => {
-              setInpVal(e.target.value);
-            }}
           />
         </div>
         <div className={styles.calc_btndiv}>
@@ -47,7 +39,8 @@ export const Calc = () => {
             <RiDeleteBack2Line />
           </button>
           <button value="%" onClick={handleButton}>
-            <AiOutlinePercentage />
+            {/* <AiOutlinePercentage /> */}
+            %
           </button>
           <button value="/" onClick={handleButton}>
             /
@@ -62,7 +55,7 @@ export const Calc = () => {
             9
           </button>
           <button value="*" onClick={handleButton}>
-            <AiOutlineClose />
+            *
           </button>
           <button value="4" onClick={handleButton}>
             4
@@ -85,8 +78,8 @@ export const Calc = () => {
           <button value="3" onClick={handleButton}>
             3
           </button>
-          <button value="+" onClick={handleButton}>
-            <AiOutlinePlus />
+          <button value='+' onClick={handleButton}>
+            +
           </button>
           <button value="0" onClick={handleButton}>
             0
